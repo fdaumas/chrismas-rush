@@ -20,7 +20,6 @@ char	*ft_read(int fd)
 	str = malloc (sizeof(char) * (READ_SIZE + 1));
 	if (!str)
 		return (NULL);
-	str = malloc(sizeof(char) * (READ_SIZE + 1));
 	int i = read(fd, str, READ_SIZE);
 	str[i]= '\0';
 	return (str);
@@ -36,5 +35,6 @@ int main(void)
 	fd = open("test.txt", O_RDONLY);
 	str = ft_read(fd);
 	printf("%s\n", str);
+	free(str);
 	close(fd);
 }

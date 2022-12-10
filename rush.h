@@ -14,8 +14,6 @@
 # define RUSH_H
 
 # include "math.h"
-# include "GNL/get_next_line.h"
-# include "libft/libft.h"
 # include <fcntl.h>
 # include <stdlib.h>
 # define READ_SIZE 4096
